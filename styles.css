@@ -1,0 +1,324 @@
+/* Base Styles */
+html, body {
+    font-family: 'Inter', sans-serif;
+    background-color: #fcfcfc;
+    color: #0e1f12;
+    line-height: 1.5;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* Desktop - No Scroll */
+@media (min-width: 1201px) {
+    html, body {
+        overflow: hidden;
+    }
+    
+    .container {
+        height: 100vh;
+        overflow: hidden;
+        box-sizing: border-box;
+    }
+    
+    .bg {
+        height: calc(100vh - 48px);
+        overflow-y: hidden;
+    }
+    
+}
+
+/* Container */
+.container {
+    padding: 24px;
+}
+
+.bg {
+    background-color: #fcfcfc;
+    background-image: url('bg.png');
+    background-repeat: repeat;
+    border-radius: 24px;
+    box-shadow: 0 4px 10px 0 rgba(14, 15, 16, 0.01) inset, 0 0 2px 0 rgba(14, 15, 16, 0.02) inset, 0 2px 6px 0 rgba(14, 15, 16, 0.06) inset;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+}
+
+/* Content */
+.content {
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+/* Header Section */
+.header-section {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    margin-bottom: 32px;
+}
+
+/* Header */
+.header {
+    flex: 1;
+}
+
+.name {
+    font-family: 'Unbounded', sans-serif;
+    font-weight: 700;
+    font-size: 64px;
+    color: #0e1f12;
+    margin-bottom: 16px;
+}
+
+.description {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: #6e7175;
+    max-width: 707px;
+}
+
+/* LinkedIn Card */
+.linkedin-card {
+    background-color: #fff;
+    border-radius: 24px;
+    padding: 16px;
+    width: 273px;
+    box-shadow: 0px 4px 10px 0px rgba(14, 15, 16, 0.02), 
+                0px 0px 2px 0px rgba(14, 15, 16, 0.04), 
+                0px 2px 6px 0px rgba(14, 15, 16, 0.1);
+    flex-shrink: 0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: block;
+}
+
+.linkedin-card:hover {
+    color: #005225;
+    text-decoration: none;
+}
+
+.linkedin-card:hover .card-title,
+.linkedin-card:hover .card-text {
+    color: #005225;
+}
+
+.card-title {
+    font-family: 'Unbounded', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    color: #0e1f12;
+    margin-bottom: 8px;
+}
+
+.card-text {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: #6e7175;
+}
+
+/* Projects Section */
+.projects-section {
+    display: flex;
+    gap: 24px;
+    margin-top: 148px;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.project-card {
+    background-color: #fff;
+    border-radius: 24px;
+    padding: 32px;
+    box-shadow: 0px 4px 10px 0px rgba(14, 15, 16, 0.02), 
+                0px 0px 2px 0px rgba(14, 15, 16, 0.04), 
+                0px 2px 6px 0px rgba(14, 15, 16, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.project-card:hover {
+    color: #005225;
+    text-decoration: none;
+}
+
+.project-card:hover .card-title,
+.project-card:hover .card-text,
+.project-card:hover h2 {
+    color: #005225;
+}
+
+.project-card:first-child {
+    flex: 1.5 1 0;
+}
+
+.project-card:nth-child(2) {
+    flex: 2 1 0;
+}
+
+.project-card:last-child {
+    flex: 1 1 0;
+}
+
+.project-card h2 {
+    font-size: 24px;
+    margin-bottom: 8px;
+}
+
+/* Additional Projects */
+.additional-projects {
+    display: flex;
+    gap: 24px;
+    margin-top: 32px;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.additional-projects .project-card {
+    flex: 2 1 0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.additional-projects .project-card:hover {
+    color: #005225;
+}
+
+.additional-projects .project-card:hover .card-title,
+.additional-projects .project-card:hover .card-text,
+.additional-projects .project-card:hover h2 {
+    color: #005225;
+}
+
+.additional-projects .project-card:first-child {
+    flex: 1.5 1 0;
+}
+
+.additional-projects .project-card:nth-child(2) {
+    flex: 1 1 0;
+}
+
+.additional-projects .project-card:last-child {
+    flex: 1;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .content {
+        padding-top: 100px;
+    }
+    
+    .name {
+        font-size: 48px;
+    }
+    
+    .header-section {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .projects-section,
+    .additional-projects {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 100px;
+        width: 100%;
+    }
+    
+    .project-card,
+    .additional-projects .project-card,
+    .additional-projects .project-card:first-child,
+    .additional-projects .project-card:nth-child(2) {
+        width: 100%;
+        max-width: 500px;
+        min-width: unset;
+    }
+    
+    .linkedin-card {
+        width: 100%;
+        max-width: 273px;
+        margin: 30px 0;
+    }
+    
+    /* Hover effects on mobile */
+    .linkedin-card:hover,
+    .project-card:hover,
+    .additional-projects .project-card:hover {
+        color: #005225;
+    }
+    
+    .linkedin-card:hover .card-title,
+    .linkedin-card:hover .card-text,
+    .project-card:hover .card-title,
+    .project-card:hover .card-text,
+    .project-card:hover h2,
+    .additional-projects .project-card:hover .card-title,
+    .additional-projects .project-card:hover .card-text,
+    .additional-projects .project-card:hover h2 {
+        color: #005225;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 16px;
+    }
+    
+    .bg {
+        padding: 24px;
+        border-radius: 16px;
+    }
+    
+    .content {
+        padding-top: 60px;
+    }
+    
+    .name {
+        font-size: 36px;
+    }
+    
+    .description {
+        font-size: 13px;
+    }
+    
+    .projects-section,
+    .additional-projects {
+        margin-top: 60px;
+        gap: 16px;
+    }
+    
+    .project-card {
+        padding: 24px;
+    }
+    
+    .project-card h2 {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .name {
+        font-size: 28px;
+    }
+    
+    .projects-section,
+    .additional-projects {
+        margin-top: 40px;
+    }
+    
+    .project-card {
+        padding: 20px;
+    }
+}
