@@ -112,8 +112,7 @@ html, body {
 /* LinkedIn Card */
 .linkedin-card {
     padding: 1rem;
-    width: 17.0625rem;
-    flex-shrink: 0;
+    flex: 0.3 1 auto;
 }
 
 /* Projects Section */
@@ -219,10 +218,19 @@ html, body {
     flex: 2 1 0;
 }
 
-/* Responsive Design */
-@media (max-width: 75rem) {
+/* Responsive Design - Mobile & Tablet */
+@media (max-width: 1199px) {
+    .container {
+        padding: 1rem;
+    }
+    
+    .bg {
+        padding: 1rem;
+    }
+    
     .content {
         padding-top: 6.25rem;
+        margin: 1rem;
     }
     
     .name {
@@ -231,43 +239,58 @@ html, body {
     
     .header-section {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: stretch;
     }
     
+    /* Stack sections vertically with consistent spacing */
     .projects-section,
     .additional-projects {
         flex-direction: column;
         align-items: center;
-        margin-top: 6.25rem;
-        width: 100%;
+        margin: 1.5rem 0;
+        align-items: stretch;
     }
     
+    /* All cards have equal width and spacing */
     .project-card,
-    .additional-projects .project-card {
-        width: 100%;
-        max-width: 31.25rem;
-        min-width: unset;
+    .additional-projects .project-card,
+    .linkedin-card {
+        flex: 1 1 auto;
     }
     
-    .linkedin-card {
-        width: 100%;
-        max-width: 17.0625rem;
-        margin: 1.875rem 0;
+    /* Remove bottom margin from last card in each section */
+    .projects-section > :last-child,
+    .additional-projects > :last-child {
+        margin-bottom: 0;
+    }
+    
+    /* Equalize card heights within sections */
+    .projects-section {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem; /* 24px gap between cards */
+    }
+    
+    .additional-projects {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem; /* 24px gap between cards */
     }
 }
 
-@media (max-width: 48rem) {
+@media (max-width: 768px) {
     .container {
         padding: 1rem;
     }
     
     .bg {
-        padding: 1.5rem;
+        padding: 1rem;
         border-radius: 1rem;
     }
     
     .content {
         padding-top: 3.75rem;
+        margin: 0;
     }
     
     .name {
@@ -278,16 +301,6 @@ html, body {
         font-size: 0.8125rem;
     }
     
-    .projects-section,
-    .additional-projects {
-        margin-top: 3.75rem;
-        gap: 1rem;
-    }
-    
-    .project-card {
-        padding: 1.5rem;
-    }
-    
     .project-card h2 {
         font-size: 1.25rem;
     }
@@ -296,14 +309,5 @@ html, body {
 @media (max-width: 30rem) {
     .name {
         font-size: 1.75rem;
-    }
-    
-    .projects-section,
-    .additional-projects {
-        margin-top: 2.5rem;
-    }
-    
-    .project-card {
-        padding: 1.25rem;
     }
 }
