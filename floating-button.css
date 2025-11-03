@@ -1,7 +1,7 @@
 /* Floating Button Container */
 .floating-button-container {
     position: fixed;
-    bottom: 56px;
+    bottom: 3.5rem;
     width: 100%;
     display: flex;
     align-items: center;
@@ -12,26 +12,29 @@
 /* Floating Button Styles */
 .floating-button {
     background-color: #ffffff;
-    border-radius: 16px;
-    box-shadow: 0px 4px 10px 0px rgba(14, 15, 16, 0.02), 
-                0px 0px 2px 0px rgba(14, 15, 16, 0.04), 
-                0px 2px 6px 0px rgba(14, 15, 16, 0.1);
-    padding: 12px 28px;
+    border-radius: 1rem;
+    box-shadow: 0 0.25rem 0.625rem 0 rgba(14, 15, 16, 0.02), 
+                0 0 0.125rem 0 rgba(14, 15, 16, 0.04), 
+                0 0.125rem 0.375rem 0 rgba(14, 15, 16, 0.1);
+    padding: 0.75rem 1.75rem;
     text-decoration: none;
     transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .floating-button p {
     font-family: 'Unbounded', sans-serif;
     font-weight: 400;
-    font-size: 14px;
+    font-size: 0.875rem;
     color: #0e0f10;
     margin: 0;
     white-space: nowrap;
 }
 
 .floating-button:hover {
-    box-shadow: 0px 6px 15px 0px rgba(14, 15, 16, 0.1);
+    box-shadow: 0 0.375rem 0.9375rem 0 rgba(14, 15, 16, 0.1);
     color: #005225;
 }
 
@@ -40,12 +43,12 @@
 }
 
 /* Responsive Design */
-@media (max-width: 1200px) {
+@media (max-width: 75rem) {
     .floating-button-container {
-        right: 16px;
+        right: 1rem;
     }
     
     .floating-button {
-        padding: 10px 20px;
+        padding: 0.625rem 1.25rem;
     }
 }
