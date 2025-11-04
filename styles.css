@@ -136,11 +136,11 @@ html, body {
 }
 
 .project-card:first-child {
-    flex: 1.5 1 0;
+    flex: 2 1 0;
 }
 
 .project-card:nth-child(2) {
-    flex: 2 1 0;
+    flex: 1.5 1 0;
 }
 
 .project-card:last-child {
@@ -216,6 +216,12 @@ html, body {
 
 .additional-projects .project-card {
     flex: 2 1 0;
+}
+
+/* Project iframe */
+.project-iframe {
+    width: 100%;
+    min-height: 100%;
 }
 
 /* Responsive Design - Mobile & Tablet */
