@@ -1,0 +1,200 @@
+---
+import "../styles/utils.css";
+import "@fontsource-variable/geist";
+---
+
+<style>
+  main {
+    padding-top: 6rem;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  p a {
+    text-decoration: solid underline var(--color-gray-400) 1px;
+    text-underline-offset: 3px;
+    color: var(--color-gray-800);
+  }
+
+  a:hover h4,
+  a:hover p,
+  p a:hover {
+    color: var(--color-gray-900);
+    text-decoration: solid underline var(--color-gray-700) 2px;
+    text-underline-offset: 3px;
+  }
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  .project_year {
+    display: flex;
+    border-top: 1px solid var(--color-gray-200);
+  }
+  .year_title {
+    flex: 1;
+    padding: 1rem 0 0 0;
+  }
+  .projects {
+    flex: 3;
+  }
+  .project {
+    border-bottom: 1px solid var(--color-gray-200);
+    padding: 1rem 0 0 0;
+  }
+  .project:last-child {
+    border-bottom: 0px;
+  }
+  h1,
+  main > p,
+  h2,
+  ul,
+  .year_title,
+  .project {
+    animation: fadeIn 300ms cubic-bezier(0.66, 0, 0.34, 1);
+    animation-delay: calc(var(--i) * 50ms);
+    animation-fill-mode: backwards;
+  }
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(0.5rem);
+    }
+    to {
+      opacity: 1;
+    }
+  }
+</style>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/portfolio/favicon.svg" />
+    <link rel="icon" href="/portfolio/favicon.ico" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Cristhian Silva</title>
+  </head>
+  <body>
+    <main>
+      <h1>Cristhian Silva</h1>
+      <p>
+        AI-native inventor. I build the parts nobody notices until they break,
+        and after hours I break things on purpose and call it inventing.
+      </p>
+      <p>
+        Since 2016 I've been building design systems: tokens, components,
+        documentation, and the rules that keep hundreds of screens speaking the
+        same language.
+      </p>
+      <p>
+        Today I work on the design system behind{" "}
+        <a
+          href="https://www.seg-social.pt/ptss/pssd/home?dswid=-9091"
+          target="_blank"
+        >
+          Portugal's social security
+        </a>
+        , through{" "}
+        <a href="https://www.capgemini.com/pt-en" target="_blank">
+          Capgemini
+        </a>
+        , unifying the informational and transactional portals that millions of
+        people rely on. Accessible by default, because public services don't get
+        to pick their users.
+      </p>
+      <p>
+        You can find me on{" "}
+        <a href="https://github.com/crsthn-slv" target="_blank">
+          Github
+        </a>{" "}
+        or reach me via <a href="mailto:cristhian.medeiros@icloud.com">email</a>
+        .
+      </p>
+      <h2 style="margin-top: 4rem;">Projects</h2>
+      <ul>
+        <li class="project_year">
+          <h3 class="year_title">2026</h3>
+          <ul class="projects">
+            <li class="project">
+              <h4>Typewriter (In development)</h4>
+              <p>
+                A writing app that clears the noise and puts your words first.
+              </p>
+            </li>
+            <li class="project">
+              <a href="https://nucleoscpfootvolley.pt/" target="_blank">
+                <h4>SCP Footvolley</h4>
+                <p>
+                  A website to bring the Footvolley community in Figueira da Foz
+                  together.
+                </p>
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li class="project_year">
+          <h3 class="year_title">2025</h3>
+          <ul class="projects">
+            <li class="project">
+              <a href="https://sousovina.pt/" target="_blank">
+                <h4>Sovina</h4>
+                <p>
+                  Browser extension that compares prices while you browse
+                  Worten, Darty, Rádio Popular, and FNAC.
+                </p>
+              </a>
+            </li>
+            <li class="project">
+              <a
+                href="https://www.figma.com/proto/R8qhKQvll0kmewrVqY21ww/Secret-portfolio?node-id=1-81&viewport=393,45,0.12&t=Auo7CWpPZNp1bjo1-1&scaling=min-zoom&content-scaling=fixed&page-id=0:1"
+                target="_blank"
+              >
+                <h4>Portugal Social Security Next Generation</h4>
+                <p>
+                  A digital transformation initiative designed to bring public
+                  information and logged-in services together in one seamless,
+                  accessible experience.
+                </p>
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li class="project_year">
+          <h3 class="year_title">2023</h3>
+          <ul class="projects">
+            <li class="project">
+              <a
+                href="https://www.figma.com/proto/u6Gu0vWAlkQtYvrRPSwjaH/Portfolio?node-id=1-4506&t=4ys2Dsvsc7Hw8jh2-0&scaling=min-zoom&content-scaling=fixed&page-id=1:570"
+                target="_blank"
+              >
+                <h4>Prefeitura online</h4>
+                <p>
+                  Platform to facilitate access to the various services provided
+                  by the Municipality and its departments to citizens, business
+                  owners, and municipal employees.
+                </p>
+              </a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </main>
+  </body>
+  <script>
+    import { imageConfig } from "astro:assets";
+    import { iban } from "astro:schema";
+
+    const order = document.querySelectorAll(
+      "h1, main > p, h2, ul, .year_title, .project",
+    );
+
+    console.log(order);
+
+    order.forEach((bloco, posicao) => {
+      console.log(posicao, bloco);
+      bloco.style.setProperty("--i", posicao);
+    });
+  </script>
+</html>
