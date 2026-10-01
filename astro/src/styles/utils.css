@@ -1,0 +1,41 @@
+:root{
+    --color-gray-0: #ffffff;
+    --color-gray-50: #fcfcfc;
+    --color-gray-100: #f7f7f8;
+    --color-gray-200: #ecedee;
+    --color-gray-300: #d8dadc;
+    --color-gray-400: #c4c7ca;
+    --color-gray-500: #84878b;
+    --color-gray-600: #6E7175;
+    --color-gray-700: #515457;
+    --color-gray-800: #3d3f43;
+    --color-gray-900: #0e0f10;
+}
+
+body {
+  font-family: 'Geist Variable', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  background-color: var(--color-gray-50);
+}
+
+main {
+    max-width: 40rem;
+    box-sizing: border-box;
+    padding-left: 16px;
+    padding-right: 16px;
+    margin: 0 auto;
+}
+
+p {
+    font-size: .875rem;
+    line-height: 1.75;
+    color: var(--color-gray-800);
+}
+
+h1, h2, h3, h4 {
+    font-size: .875rem;
+    font-weight: 500;
+    color: var(--color-gray-900);
+    margin: 0;
+}
