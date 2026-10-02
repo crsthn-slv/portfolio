@@ -1,6 +1,8 @@
 ---
 import "../styles/utils.css";
 import "@fontsource-variable/geist";
+const metaDescription =
+  "AI-native inventor. I break things on purpose and call it inventing.";
 ---
 
 <style>
@@ -74,10 +76,8 @@ import "@fontsource-variable/geist";
     <meta name="generator" content={Astro.generator} />
     <title>Cristhian Silva</title>
     <meta property="og:title" content="Cristhian Silva" />
-    <meta
-      property="og:description"
-      content="I break things on purpose and call it inventing."
-    />
+    <meta property="og:description" content={metaDescription} />
+    <meta name="description" content={metaDescription} />
     <meta
       property="og:image"
       content="https://crsthn-slv.github.io/portfolio/og-image.png"
@@ -201,13 +201,12 @@ import "@fontsource-variable/geist";
       </ul>
     </main>
     <script>
-      const order = document.querySelectorAll(
+      const order = document.querySelectorAll<HTMLElement>(
         "h1, main > p, h2, ul, .year-label, .project",
       );
 
       order.forEach((bloco, posicao) => {
-        console.log(posicao, bloco);
-        bloco.style.setProperty("--i", posicao);
+        bloco.style.setProperty("--i", posicao.toString());
       });
     </script>
   </body>
